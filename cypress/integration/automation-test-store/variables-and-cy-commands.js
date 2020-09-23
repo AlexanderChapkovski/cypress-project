@@ -1,3 +1,4 @@
+/// <reference types="cypress" />
 
 
 describe("Inspect Automation Test Store items using chain of commands", () => {
