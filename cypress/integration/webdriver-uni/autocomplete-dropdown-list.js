@@ -1,4 +1,4 @@
-// <reference types="cypress" />
+/// <reference types="cypress" />
 
 describe("Verify autocomplete dropdown lists via dropdown webdriveruni", () => {
   it("Select specific product via autocomplete list", () => {
