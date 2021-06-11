@@ -30,7 +30,7 @@ describe("Inspect Automation Test Store items using chain of commands", () => {
       .find("#field_11")
       .should("contain", "First name");
 
-    // Uses JQuery approach
+    //   Uses JQuery approach
     cy.contains("#ContactUsFrm", "Contact Us Form").then(($contactUsForm) => {
       const firstNameText = $contactUsForm.find("#field_11").text();
       expect(firstNameText).to.contain("First name:");
@@ -39,7 +39,7 @@ describe("Inspect Automation Test Store items using chain of commands", () => {
       cy.get("#field_11").then((fnText) => {
         cy.log(fnText);
         cy.log(fnText.text());
-      });
+      }); 
     });
   });
 });
