@@ -10,7 +10,7 @@ describe("Inspect Automation Test Store items using chain of commands", () => {
       cy.get('@productThumbnail').should('include', 'Seaweed Conditioner');
       })
 
-      it("Validate product thumbnail", () => {
+      it.only("Validate product thumbnail", () => {
         cy.visit("https://automationteststore.com/");
   
         cy.get('.thumbnail').its('length').should('eq', 16);
@@ -24,7 +24,7 @@ describe("Inspect Automation Test Store items using chain of commands", () => {
 
         })
 
-        it.only("Validate product thumbnail", () => {
+        it("Validate product thumbnail", () => {
             cy.visit("https://automationteststore.com/");
     
             //another variant with Aliases
