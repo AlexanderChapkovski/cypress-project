@@ -1,6 +1,19 @@
 {
-    "ignoreTestFiles": "**/examples/*",
-    "viewportWidth": 1920,
-    "viewportHeight": 1080,
-    "chromeWebSecurity": false
+  "baseUrl": "http://webdriveruniversity.com/",
+  "ignoreTestFiles": ["**/examples/*", "**/other/*"],
+  "viewportWidth": 1920,
+  "viewportHeight": 1080,
+  "chromeWebSecurity": false,
+  "defaultCommandTimeout": 10000,
+  "pageLoadTimeout": 30000,
+  "env": {
+    "RETRIES": 2,
+    "first_name": "Sarah",
+    "webdriveruni_homepage": "http://webdriveruniversity.com/"
+  },
+  "projectId": "5k9nan",
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  }
 }

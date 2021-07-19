@@ -1,12 +1,10 @@
 /// <reference types="cypress" />
-beforeEach(() => {
-  cy.visit("http://webdriveruniversity.com/");
-  cy.get("#dropdown-checkboxes-radiobuttons")
-    .invoke("removeAttr", "target")
-    .click({ force: true });
-});
 
 describe("Verify checkboxes via webdriveruni", () => {
+  beforeEach(() => {
+    cy.log(Cypress.env("name"));
+    cy.navigateTo_WebdriverUni_Checkbox_Page();
+  });
   it("Check and validate checkbox", () => {
     cy.get("#checkboxes > :nth-child(1) > input").check().should("be.checked");
     cy.get("#checkboxes > :nth-child(3) > input").as("option-2");
@@ -20,8 +18,6 @@ describe("Verify checkboxes via webdriveruni", () => {
   });
 
   it("Check multiple checkboxes", () => {
-    cy.get('input[type="checkbox"]')
-      .check(["option-1", "option-2", "option-3", "option-4"])
-      .should("be.checked");
+    cy.get('input[type="checkbox"]').check(["option-1", "option-2", "option-3", "option-4"]).should("be.checked");
   });
 });
