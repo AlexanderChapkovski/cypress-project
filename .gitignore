@@ -4,4 +4,4 @@ mochawesome-report
 screenshots
 results
 package-lock.json
-
+.DS_Store
