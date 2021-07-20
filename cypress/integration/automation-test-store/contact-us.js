@@ -9,7 +9,7 @@ describe("Test Contact Us form via Automation Test Store", () => {
   it("Should be able to submit a successful submission via contact-us form", () => {
     //Cypress.currentTest.retries(1);
     cy.visit("https://automationteststore.com/");
-    cy.get('a[href$="contact555"]')
+    cy.get('a[href$="contact"]')
       .click()
       .then((linkText) => {
         cy.log("Link text is: " + linkText.text());
