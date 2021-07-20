@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
-describe("Inspect Automation Test Store items using chain of commands", () => {
-    it("Log information about all hair products", () => {
+describe("Alias and invoke", () => {
+    it("Validate a specific hair care product", () => {
       cy.visit("https://automationteststore.com/");
       cy.get('a[href*="product/category&path="]').contains("Hair Care").click();
 
