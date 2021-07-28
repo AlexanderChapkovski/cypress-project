@@ -1,13 +1,16 @@
 {
   "baseUrl": "http://webdriveruniversity.com/",
-  "ignoreTestFiles": ["**/examples/*", "**/other/*"],
   "viewportWidth": 1920,
   "viewportHeight": 1080,
   "chromeWebSecurity": false,
   "defaultCommandTimeout": 10000,
   "pageLoadTimeout": 30000,
+  "experimentalStudio": true,
+  "retries": {
+	  "runMode": 1,
+	  "openMode": 1
+  },
   "env": {
-    "RETRIES": 2,
     "first_name": "Sarah",
     "webdriveruni_homepage": "http://webdriveruniversity.com/"
   },

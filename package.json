@@ -9,8 +9,10 @@
     "triggerAllTests-chrome": "npx cypress run --browser chrome",
     "triggerAllTests-dashboard": "npx cypress run --record --key e5feb4e8-574c-4091-9a6c-885a6c320357",
     "triggerAllTests-webdriveruni": "npx cypress run --spec cypress/integration/webdriver-uni/*",
+    "triggerAllTests-autoTestStore": "npx cypress run --spec cypress/integration/automation-test-store/* --headed",
     "triggerAllTests-autostore": "npx cypress run --spec cypress/integration/automation-test-store/*",
     "triggerAllTests-autostore-dashboard": "npx cypress run --spec cypress/integration/automation-test-store/* --record --key e5feb4e8-574c-4091-9a6c-885a6c320357",
+    "triggerAllTests-cucumberTests": "npx cypress run --spec cypress/integration/webdriver-uni/features/*.feature --browser chrome",
     "junit-merge": "jrm cypress/results/junit/combined-report.xml \"cypress/results/junit/*.xml\"",
     "delete-junit-report": "rm -rf cypress/results/junit/combined-report.xml",
     "delete-results": "rm -rf cypress/results/* || true",
@@ -23,10 +25,10 @@
   "author": "Alex",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^4.12.1",
+    "cypress": "^6.5.0",
+    "cypress-cucumber-preprocessor": "^4.2.0",
     "cypress-file-upload": "^4.0.7",
     "cypress-multi-reporters": "^1.5.0",
-    "cypress-plugin-retries": "^1.5.2",
     "cypress-xpath": "^1.6.0",
     "junit-report-merger": "^2.2.3",
     "mocha": "^9.0.2",
@@ -34,5 +36,8 @@
     "mochawesome": "^6.2.2",
     "mochawesome-merge": "^4.2.0",
     "mochawesome-report-generator": "^5.2.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false
   }
 }
